@@ -1,0 +1,26 @@
+{
+  "name": "ts-node-template",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "https://mshrtsr@github.com/mshrtsr/ts-node-template.git",
+  "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "TS_NODE_FILES=true ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "TS_NODE_FILES=true ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "tslint": "tslint --project ./  --fix"
+  },
+  "dependencies": {
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.4",
+    "ts-node-dev": "^1.0.0-pre.41",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "tslint-plugin-prettier": "^2.0.1"
+  }
+}

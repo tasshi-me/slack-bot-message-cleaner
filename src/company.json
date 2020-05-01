@@ -1,0 +1,13 @@
+{
+    "name": "hello company Inc.",
+    "members": [
+        {
+            "name": "Alice",
+            "age": "10"
+        },
+        {
+            "name": "Bob",
+            "age": "20"
+        }
+    ]
+}
