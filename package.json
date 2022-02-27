@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "start": "TS_NODE_FILES=true ts-node -r tsconfig-paths/register src/index.ts",
-    "dev": "TS_NODE_FILES=true ts-node-dev -r tsconfig-paths/register src/index.ts",
     "tslint": "tslint --project ./  --fix"
   },
   "dependencies": {
@@ -16,6 +15,8 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
+    "@slack/web-api": "^5.8.1",
+    "dotenv": "^8.2.0",
     "prettier": "^2.0.4",
     "ts-node-dev": "^1.0.0-pre.41",
     "tslint": "^6.1.1",

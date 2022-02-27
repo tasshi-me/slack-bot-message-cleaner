@@ -19,3 +19,6 @@ coverage/
 **/.vscode
 !**/.vscode/tasks.json
 .idea
+
+# env variables
+.env
