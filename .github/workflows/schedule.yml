@@ -1,0 +1,25 @@
+name: schedule
+on:
+  schedule:
+    - cron: "0 3 * * *"
+
+jobs:
+  delete:
+    name: Delete bot messages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nodenv/actions/node-version@main
+        id: nodenv
+      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: "${{ steps.nodenv.outputs.node-version }}"
+      - name: yarn install, and yarn start
+        run: |
+          yarn install
+          yarn start
+        env:
+          CI: true
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          CHANNELS: ${{ secrets.SLACK_CHANNELS }}
