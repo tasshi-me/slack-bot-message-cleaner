@@ -1,7 +1,5 @@
-function delay(msec: number) {
+export const delay = (msec: number) => {
   return new Promise((resolve) => {
     setTimeout(resolve, msec);
   });
-}
-
-export default delay;
+};

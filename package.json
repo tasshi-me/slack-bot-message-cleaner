@@ -7,21 +7,19 @@
   "license": "MIT",
   "scripts": {
     "start": "TS_NODE_FILES=true ts-node -r tsconfig-paths/register src/index.ts",
-    "tslint": "tslint --project ./  --fix"
+    "lint": "eslint 'src/**/*.ts'",
+    "fix": "yarn lint --fix"
   },
   "dependencies": {
+    "@slack/web-api": "^6.7.0",
+    "dotenv": "^16.0.0",
     "ts-node": "^8.3.0",
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@slack/web-api": "^5.8.1",
-    "dotenv": "^8.2.0",
-    "prettier": "^2.0.4",
-    "ts-node-dev": "^1.0.0-pre.41",
-    "tslint": "^6.1.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-config-standard": "^9.0.0",
-    "tslint-plugin-prettier": "^2.0.1"
+    "@cybozu/eslint-config": "^17.0.0",
+    "eslint": "^8.10.0",
+    "prettier": "^2.0.4"
   }
 }
