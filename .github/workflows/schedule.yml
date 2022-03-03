@@ -15,6 +15,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
+      - name: mask channels
+        run: |
+          set -eu
+          arr=($(echo "$CHANNELS" | tr ',' "$IFS"))
+          for c in "${arr[@]}"; do echo "::add-mask::${c}"; done
+        env:
+          CHANNELS: ${{ secrets.SLACK_CHANNELS }}
       - name: yarn install, and yarn start
         run: |
           yarn install
