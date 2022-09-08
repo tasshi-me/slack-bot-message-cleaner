@@ -20,6 +20,6 @@
   "devDependencies": {
     "@cybozu/eslint-config": "^17.0.3",
     "eslint": "^8.23.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.7.1"
   }
 }
