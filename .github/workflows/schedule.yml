@@ -12,7 +12,7 @@ jobs:
       - uses: nodenv/actions/node-version@a951c9ffd012545fc0867d4b3cbd986c12c4a3c0 # main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
       - name: mask channels
