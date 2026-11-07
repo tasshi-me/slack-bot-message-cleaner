@@ -8,7 +8,7 @@ jobs:
     name: Delete bot messages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - uses: nodenv/actions/node-version@a951c9ffd012545fc0867d4b3cbd986c12c4a3c0 # main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
